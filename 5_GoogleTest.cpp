@@ -61,7 +61,7 @@ TEST(GoogleTestSample, Test3) {
 // EXPECT_THROW / EXPECT_ANY_THROW
 void checkName(const std::string& name) {
 	 // throw 3;
-#if 0
+#if 1
 	if (name.empty()) 
 		throw std::invalid_argument("name is empty");
 #endif
@@ -87,23 +87,14 @@ TEST(GoogleTestSample, Test4) {
 	EXPECT_ANY_THROW(checkName("")); // 예외가 발생하면 성공!
 }
 
+// 5. Disabled Test
+// 테스트를 절대 비활성화하기 위해서 주석처리하면 안된다.
+// => 잊혀진 테스트
+// => 비활성화된 테스트를 별도로 구동할 수 있는 기능을 제공합니다.
+// $ ./a.out --gtest_also_run_disabled_tests
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// DISABLED_
+TEST(DISABLED_GoogleTestSample, Test5) {
+	// 아직 완성되지 않았음.
+	FAIL() << "작성 중입니다..";
+}
