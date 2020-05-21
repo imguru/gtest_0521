@@ -4,7 +4,7 @@
 // TEST -> TEST_F
 
 // 신선한 픽스쳐 전략
-//  : 
+//   <=> 공유 픽스쳐 전략 
 
 #if 0
 	SampleTest* t = new SampleTest;
