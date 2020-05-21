@@ -1,10 +1,15 @@
 
 #include <gtest/gtest.h>
 
+// TestCase : Test의 집합
+// TestSuite : 동일한 픽스쳐를 가지는 Test의 집합
+//  => TestCase를 TestSuite으로 취급한다.
+
 // * 테스트 함수를 만드는 방법.
 // TestCaseName.TestName
 TEST(TestCaseName, TestName) {
-
+	// 테스트가 작성 중이면, 실패하여야 한다.
+	FAIL() << "테스트가 작성 중입니다.";
 }
 
 TEST(TestCaseName2, TestName) {
